@@ -15,6 +15,6 @@ A simple flutter project to fetch data from postman and display them in table
 
 ## Screenshots
 
-<!-- <img src="assets/images/screen1.png"></img><br>
-<img src="assets/images/screen2.png"></img> -->
+<img src="assets/images/me.png"></img><br>
+
 
