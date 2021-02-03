@@ -91,6 +91,7 @@ class DataTableState extends State<DataTable> {
                     ]),
                     TableRow(children: [
                       Container(
+<<<<<<< HEAD
                         width: 300,
                         height: 600,
                         margin: EdgeInsets.only(left: 10),
@@ -314,6 +315,210 @@ class DataTableState extends State<DataTable> {
                     //       margin: EdgeInsets.only(left: 10),
                     //       child: Text(result[11]['username'])),
                     // ]),
+=======
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[0]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[0]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[0]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[1]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[1]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[1]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[2]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[2]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[2]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[3]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[3]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[3]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[4]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[4]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[4]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[5]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[5]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[5]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[6]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[6]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[6]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[7]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[7]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[7]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[8]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[8]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[8]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[9]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[9]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[9]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[10]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[10]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[10]['username'])),
+                    ]),
+                    TableRow(children: [
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[11]['firstname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[11]['lastname'])),
+                      Container(
+                          width: 300,
+                          height: 30,
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(result[11]['username'])),
+                    ]),
+>>>>>>> c97516d2f63fa11fe2e129776b174e1ae3970045
                   ],
                 ),
               ),
