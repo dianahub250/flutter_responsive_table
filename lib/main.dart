@@ -5,16 +5,16 @@ import 'dart:convert';
 
 void main() {
   runApp(new MaterialApp(
-    home: DataTable(),
+    home: Tabledata(),
   ));
 }
 
-class DataTable extends StatefulWidget {
+class Tabledata extends StatefulWidget {
   @override
-  DataTableState createState() => new DataTableState();
+  TabledataState createState() => new TabledataState();
 }
 
-class DataTableState extends State<DataTable> {
+class TabledataState extends State<Tabledata> {
   final String url = "https://fakerapi.it/api/v1/users?_quantity=100";
   int index = 0;
   List result;
@@ -42,18 +42,6 @@ class DataTableState extends State<DataTable> {
           title: new Text('Table data'),
         ),
         body: new Center(
-          // child: new Column(
-          //   crossAxisAlignment: CrossAxisAlignment.stretch,
-          //   children: <Widget>[
-          //     new Card(
-          //       child: new Container(
-          //         child: new Text(result[index]['firstname']),
-          //         padding: EdgeInsets.all(20.0),
-          //       ),
-          //     )
-          //   ],
-          // ),
-
           child: Column(
             children: <Widget>[
               Container(
@@ -91,434 +79,84 @@ class DataTableState extends State<DataTable> {
                     ]),
                     TableRow(children: [
                       Container(
-<<<<<<< HEAD
-                        width: 300,
-                        height: 600,
-                        margin: EdgeInsets.only(left: 10),
-                        child: ListView.builder(
-                            itemCount: result.length,
-                            itemBuilder: (BuildContext ctxt, int index) {
-                              return Container(
-                                child: Text(result[index]['firstname']),
-                              );
-                            }),
-                      ),
+                          width: 300,
+                          height: 600,
+                          child: ListView.builder(
+                              itemCount: result == null ? 0 : result.length,
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  height: 50,
+                                  child: Container(
+                                      margin: EdgeInsets.only(left: 10),
+                                      child: Text(
+                                        result[index]['firstname'],
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                        ),
+                                      )),
+                                  decoration: index % 2 == 0
+                                      ? new BoxDecoration(
+                                          borderRadius:
+                                              new BorderRadius.circular(
+                                            4.0,
+                                          ),
+                                          color: Color(0xff5FD3FF))
+                                      : null,
+                                );
+                              })),
                       Container(
-                        width: 300,
-                        height: 600,
-                        margin: EdgeInsets.only(left: 10),
-                        child: ListView.builder(
-                            itemCount: result.length,
-                            itemBuilder: (BuildContext ctxt, int index) {
-                              return Container(
-                                child: Text(result[index]['lastname']),
-                              );
-                            }),
-                      ),
+                          width: 300,
+                          height: 600,
+                          child: ListView.builder(
+                              itemCount: result == null ? 0 : result.length,
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  height: 50,
+                                  child: Container(
+                                      margin: EdgeInsets.only(left: 10),
+                                      child: Text(
+                                        result[index]['lastname'],
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                        ),
+                                      )),
+                                  decoration: index % 2 == 0
+                                      ? new BoxDecoration(
+                                          borderRadius:
+                                              new BorderRadius.circular(
+                                            4.0,
+                                          ),
+                                          color: Color(0xff5FD3FF))
+                                      : null,
+                                );
+                              })),
                       Container(
-                        width: 300,
-                        height: 600,
-                        margin: EdgeInsets.only(left: 10),
-                        child: ListView.builder(
-                            itemCount: result.length,
-                            itemBuilder: (BuildContext ctxt, int index) {
-                              return Container(
-                                child: Text(result[index]['username']),
-                              );
-                            }),
-                      ),
+                          width: 300,
+                          height: 600,
+                          child: ListView.builder(
+                              itemCount: result == null ? 0 : result.length,
+                              itemBuilder: (context, index) {
+                                return Container(
+                                  height: 50,
+                                  child: Container(
+                                      margin: EdgeInsets.only(left: 5),
+                                      child: Text(
+                                        result[index]['username'],
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                        ),
+                                      )),
+                                  decoration: index % 2 == 0
+                                      ? new BoxDecoration(
+                                          borderRadius:
+                                              new BorderRadius.circular(
+                                            4.0,
+                                          ),
+                                          color: Color(0xff5FD3FF))
+                                      : null,
+                                );
+                              })),
                     ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[1]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[1]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[1]['username'])),
-                    // ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[2]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[2]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[2]['username'])),
-                    // ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[3]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[3]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[3]['username'])),
-                    // ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[4]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[4]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[4]['username'])),
-                    // ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[5]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[5]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[5]['username'])),
-                    // ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[6]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[6]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[6]['username'])),
-                    // ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[7]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[7]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[7]['username'])),
-                    // ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[8]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[8]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[8]['username'])),
-                    // ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[9]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[9]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[9]['username'])),
-                    // ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[10]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[10]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[10]['username'])),
-                    // ]),
-                    // TableRow(children: [
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[11]['firstname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[11]['lastname'])),
-                    //   Container(
-                    //       width: 300,
-                    //       height: 30,
-                    //       margin: EdgeInsets.only(left: 10),
-                    //       child: Text(result[11]['username'])),
-                    // ]),
-=======
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[0]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[0]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[0]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[1]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[1]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[1]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[2]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[2]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[2]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[3]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[3]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[3]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[4]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[4]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[4]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[5]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[5]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[5]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[6]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[6]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[6]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[7]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[7]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[7]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[8]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[8]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[8]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[9]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[9]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[9]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[10]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[10]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[10]['username'])),
-                    ]),
-                    TableRow(children: [
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[11]['firstname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[11]['lastname'])),
-                      Container(
-                          width: 300,
-                          height: 30,
-                          margin: EdgeInsets.only(left: 10),
-                          child: Text(result[11]['username'])),
-                    ]),
->>>>>>> c97516d2f63fa11fe2e129776b174e1ae3970045
                   ],
                 ),
               ),
