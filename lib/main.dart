@@ -26,7 +26,6 @@ class TabledataState extends State<Tabledata> {
 
   Future<String> getJsonData() async {
     var response = await http.get(url, headers: {"Accept": "application/json"});
-    print(response.body);
 
     setState(() {
       var convertDataToJson = json.decode(response.body);
@@ -87,7 +86,7 @@ class TabledataState extends State<Tabledata> {
                                 return Container(
                                   height: 50,
                                   child: Container(
-                                      margin: EdgeInsets.only(left: 10),
+                                      margin: EdgeInsets.only(left: 10, top: 5),
                                       child: Text(
                                         result[index]['firstname'],
                                         style: TextStyle(
@@ -113,7 +112,7 @@ class TabledataState extends State<Tabledata> {
                                 return Container(
                                   height: 50,
                                   child: Container(
-                                      margin: EdgeInsets.only(left: 10),
+                                      margin: EdgeInsets.only(left: 10, top: 5),
                                       child: Text(
                                         result[index]['lastname'],
                                         style: TextStyle(
@@ -139,7 +138,7 @@ class TabledataState extends State<Tabledata> {
                                 return Container(
                                   height: 50,
                                   child: Container(
-                                      margin: EdgeInsets.only(left: 5),
+                                      margin: EdgeInsets.only(left: 5, top: 5),
                                       child: Text(
                                         result[index]['username'],
                                         style: TextStyle(
