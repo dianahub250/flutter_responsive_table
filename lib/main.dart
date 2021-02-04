@@ -45,10 +45,6 @@ class TabledataState extends State<Tabledata> {
             children: <Widget>[
               Container(
                 margin: EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                      color: Colors.black, style: BorderStyle.solid, width: 2),
-                ),
                 child: Table(
                   defaultVerticalAlignment: TableCellVerticalAlignment.top,
                   children: [
